@@ -1,0 +1,78 @@
+--- step1_table
+hidden mark (the program knows it, the observer does not): 0.711
+after    0 balls:   0 left   best guess 0.500   90 % sure it is between 0.050 and 0.950  (width 0.900)
+after    1 ball :   1 left   best guess 0.667   90 % sure it is between 0.224 and 0.975  (width 0.751)
+after    2 balls:   2 left   best guess 0.750   90 % sure it is between 0.368 and 0.984  (width 0.615)
+after    5 balls:   4 left   best guess 0.714   90 % sure it is between 0.418 and 0.938  (width 0.519)
+after   10 balls:   7 left   best guess 0.667   90 % sure it is between 0.435 and 0.865  (width 0.429)
+after   20 balls:  16 left   best guess 0.773   90 % sure it is between 0.616 and 0.901  (width 0.286)
+after  100 balls:  70 left   best guess 0.696   90 % sure it is between 0.620 and 0.768  (width 0.149)
+after 1000 balls: 709 left   best guess 0.709   90 % sure it is between 0.684 and 0.732  (width 0.047)
+order does not matter: all lefts first, or all at once, same curve (largest gap 1.8e-15)
+--- step2_test
+10000 people: 100 ill, 9900 well
+positive tests: 90 from the ill, 891 from the well, 981 in all
+ill, given a positive test: 90 / 981 = 9.2%
+Bayes's rule after 1 positive test: 9.2%
+Bayes's rule after 2 positive tests: 50.3%
+Bayes's rule after 3 positive tests: 91.0%
+after one negative test instead: 0.11%
+a million simulated people: 98184 positive, 8991 of them ill = 9.2%
+--- step3_succession
+1000000 made-up worlds, 10 tries each, then one more try
+10 of 10: next try hits in 0.9169 of 90828 worlds   curve 0.9167   rule (10+1)/(10+2) = 0.9167
+ 7 of 10: next try hits in 0.6664 of 91326 worlds   curve 0.6667   rule (7+1)/(10+2) = 0.6667
+ 5 of 10: next try hits in 0.5002 of 90712 worlds   curve 0.5000   rule (5+1)/(10+2) = 0.5000
+ 0 of 10: next try hits in 0.0854 of 90670 worlds   curve 0.0833   rule (0+1)/(10+2) = 0.0833
+two restaurants
+new place: 10 of 10 good reviews = 100.0%   next visit good 91.7%   chance its true rate is under 90 %: 31.4%
+old place: 480 of 500 good reviews = 96.0%   next visit good 95.8%   chance its true rate is under 90 %: less than 0.1%
+sunrise: 1826213 of 1826213 days. Tomorrow: 1826214/1826215 = 0.999999452, odds 1826214 to 1
+sunrise every day for the next 1826213 days as well: 0.5000
+nothing seen yet, 0 of 0: 0.50
+--- step4_births
+251527 boys, 241945 girls, 493472 births: 50.97% boys, 9582 more boys than girls
+   100 births with 51 boys: chance that boys are NOT more likely = 0.421
+  1000 births with 510 boys: chance that boys are NOT more likely = 0.264
+ 10000 births with 5097 boys: chance that boys are NOT more likely = 0.0262
+100000 births with 50971 boys: chance that boys are NOT more likely = 4.09e-10
+493472 births with 251527 boys: chance that boys are NOT more likely = 1.15e-42
+written out: 0.00000000000000000000000000000000000000000115  (41 zeros after the point)
+Laplace's own figure, by hand: 1.1521 / 10^42
+--- step5_start
+true rate 0.3
+after     0 tries (   0 hits): open 0.500   biased 0.955   closed 0.750
+after    10 tries (   3 hits): open 0.333   biased 0.750   closed 0.570
+after   100 tries (  27 hits): open 0.275   biased 0.393   closed 0.510
+after  1000 tries ( 284 hits): open 0.284   biased 0.298   closed 0.501
+after 10000 tries (2933 hits): open 0.293   biased 0.295   closed 0.501
+open and biased end 0.0014 apart; closed is still 0.201 from the truth
+--- step6_mail
+learned from 30 junk and 30 wanted messages: 217 and 263 words, 208 different
+plus 0: 21 right, 0 wrong, 3 with no answer, out of 24   (verdicts forced by a zero: 21)
+plus 1: 24 right, 0 wrong, 0 with no answer, out of 24   (verdicts forced by a zero: 0)
+one message: "we won free tickets to the game come with us"
+  we       junk 0  wanted 4   plain counts: ZERO in junk    with plus one:  0.22 times as likely in junk
+  won      junk 2  wanted 1   plain counts: ok              with plus one:  1.66 times as likely in junk
+  free     junk 9  wanted 0   plain counts: ZERO in wanted  with plus one: 11.08 times as likely in junk
+  tickets  junk 1  wanted 0   plain counts: ZERO in wanted  with plus one:  2.22 times as likely in junk
+  to       junk 5  wanted 4   plain counts: ok              with plus one:  1.33 times as likely in junk
+  the      junk 1  wanted 31   plain counts: ok              with plus one:  0.07 times as likely in junk
+  game     junk 0  wanted 2   plain counts: ZERO in junk    with plus one:  0.37 times as likely in junk
+  come     junk 0  wanted 1   plain counts: ZERO in junk    with plus one:  0.55 times as likely in junk
+  with     junk 2  wanted 0   plain counts: ZERO in wanted  with plus one:  3.32 times as likely in junk
+  us       junk 0  wanted 0   plain counts: new word        with plus one:  1.00 times as likely in junk
+  plain counts say: None.  With plus one: wanted, junk chance 36.2%
+most junk-like words: now, free, click, claim, winner, win | most wanted-like: the, i, great, can, me, meeting
+--- step7_buttons
+true click rates [0.04, 0.05, 0.07], 20000 visitors, average of 200 runs. Always the best version: 1400 clicks
+even split         1069.5 clicks   unluckiest tenth of runs  1014.8   best version shown to 33.3%   never chooses
+test then commit   1310.4 clicks   unluckiest tenth of runs   920.1   best version shown to 79.0%   settled on a worse version in 40 of 200 runs
+thompson           1366.3 clicks   unluckiest tenth of runs  1268.7   best version shown to 91.9%   settled on a worse version in 1 of 200 runs
+one Thompson run, visitor by visitor
+  after   30: shown [13, 8, 9]  clicks [2, 0, 0]
+  after  100: shown [32, 42, 26]  clicks [2, 5, 2]
+  after  300: shown [75, 114, 111]  clicks [3, 6, 7]
+  after 1000: shown [241, 201, 558]  clicks [11, 8, 40]
+  after 5000: shown [489, 278, 4233]  clicks [22, 11, 289]
+  after 20000: shown [727, 563, 18710]  clicks [32, 23, 1310]
